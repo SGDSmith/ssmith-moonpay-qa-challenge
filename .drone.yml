@@ -7,3 +7,9 @@ steps:
   commands:
     - npm install
     - npx codeceptjs run
+
+trigger:
+  branch:
+  - main
+  event:
+  - push
