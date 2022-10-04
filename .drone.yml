@@ -14,9 +14,3 @@ steps:
       - push
     branch:
       - main
-
-trigger:
-  branch:
-    - main
-  event:
-    - push
