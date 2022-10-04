@@ -1,4 +1,5 @@
 kind: pipeline
+type: docker
 name: default
 
 steps:
@@ -8,6 +9,11 @@ steps:
     - npm install
     - npx playwright install-deps
     - npx codeceptjs run
+  when:
+    event:
+      - push
+    branch:
+      - main
 
 trigger:
   branch:
