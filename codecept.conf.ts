@@ -10,6 +10,6 @@ export const config: CodeceptJS.MainConfig = {
       waitForAction: 200
     }
   },
-  include: {},
+  include: {stripeCheckoutPage: './pages/stripeCheckoutPage.js',},
   name: 'ssmith-moonpay-qa-challenge'
 }
