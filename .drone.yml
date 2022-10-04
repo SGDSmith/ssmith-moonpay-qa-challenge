@@ -6,6 +6,7 @@ steps:
   image: node
   commands:
     - npm install
+    - npx playwright install-deps
     - npx codeceptjs run
 
 trigger:
