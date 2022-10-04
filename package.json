@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "http://starscream.local:3000/steven/ssmith-moonpay-qa-challenge.git"
+    "url": "http://192.168.50.44:3000/steven/ssmith-moonpay-qa-challenge.git"
   },
   "keywords": [],
   "author": "",
