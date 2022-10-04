@@ -9,8 +9,3 @@ steps:
     - npm install
     - npx playwright install-deps
     - npx codeceptjs run
-  when:
-    event:
-      - push
-    branch:
-      - main
