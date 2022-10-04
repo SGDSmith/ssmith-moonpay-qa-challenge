@@ -5,8 +5,8 @@ steps:
 - name: test
   image: node
   commands:
-  - npm install
-  - npx codeceptjs run
+    - npm install
+    - npx codeceptjs run
   when:
     branch:
       - main
