@@ -1,3 +1,6 @@
+import * as dotenv from 'dotenv';
+import cards from '../config/cards.config';
+
 Feature('Payment Tests');
 
 Scenario('Successful Payment', ({ I }) => {
