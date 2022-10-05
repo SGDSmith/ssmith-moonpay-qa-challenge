@@ -1,5 +1,17 @@
-Feature('payment');
+Feature('Payment Tests');
 
-Scenario('test something', ({ I }) => {
+Scenario('Successful Payment', ({ I }) => {
+
+});
+
+Scenario('Payment Declined', ({ I }) => {
+
+});
+
+Scenario('Successful Payment after Authentication', ({ I }) => {
+
+});
+
+Scenario('Declined Payment after Authentication', ({ I }) => {
 
 });

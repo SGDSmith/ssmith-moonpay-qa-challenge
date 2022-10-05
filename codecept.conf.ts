@@ -10,6 +10,18 @@ export const config: CodeceptJS.MainConfig = {
       waitForAction: 200
     }
   },
-  include: {stripeCheckoutPage: './pages/stripeCheckoutPage.js',},
-  name: 'ssmith-moonpay-qa-challenge'
+  include: {
+    I: './steps/steps.js',
+    stripeCheckoutPage: './pages/stripeCheckoutPage.js'
+  },
+  name: 'ssmith-moonpay-qa-challenge',
+  plugins: {
+    screenshotOnFail: {
+      enabled: true
+    },
+    pauseOnFail: {},
+    retryFailedStep: {
+      enabled: true
+    }
+  }
 }

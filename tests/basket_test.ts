@@ -1,5 +1,9 @@
-Feature('basket');
+Feature('Basket Tests');
 
-Scenario('test something', ({ I }) => {
+Scenario('Basket is Displayed', ({ I }) => {
+
+});
+
+Scenario('Basket can be Updated', ({ I }) => {
 
 });
