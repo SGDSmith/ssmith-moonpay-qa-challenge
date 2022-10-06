@@ -6,6 +6,7 @@ steps:
 - name: test
   image: node
   commands:
+    - cp .env.sample .env
     - npm install
     - npx playwright install-deps
     - npx codeceptjs run
