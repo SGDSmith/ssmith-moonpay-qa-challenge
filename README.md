@@ -16,7 +16,7 @@ The tests were written in TypeScript/JavaScript utilising a testing framework ca
 
 I used [Drone](https://www.drone.io/) as the CI platform mainly just to ensure that the tests run successfully on both my local development machine and on a local server. The .drone.yml file shows the basic pipeline which was used during this task.
 
-There is a basic visual test included in the repo. This utilises [Resemble.js](https://github.com/rsmbl/Resemble.js) in order to perform some visual diffs. If the npm install command fails on this repo, please install GTK 2 and libjpeg-turbo which should fix this.
+There is a basic visual test included in the branch feature/visual-tests. This utilises [Resemble.js](https://github.com/rsmbl/Resemble.js) in order to perform some visual diffs. If the npm install command fails on this repo, please install GTK 2 and libjpeg-turbo which should fix this. This was left on a branch and removed from main due to the dependencies of GTK 2 and libjpeg-turbo being installed.
 
 ## Approach
 

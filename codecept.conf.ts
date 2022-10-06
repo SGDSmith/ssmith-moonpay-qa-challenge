@@ -7,12 +7,6 @@ export const config: CodeceptJS.MainConfig = {
       show: false,
       browser: 'chromium',
       waitForAction: 200
-    },
-    ResembleHelper: {
-      require: "codeceptjs-resemblehelper",
-      screenshotFolder: "./output/",
-      baseFolder: "./tests/screenshots/base/",
-      diffFolder: "./tests/screenshots/diff/"
     }
   },
   include: {
