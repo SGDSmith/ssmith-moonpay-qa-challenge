@@ -4,15 +4,15 @@ export const config: CodeceptJS.MainConfig = {
   helpers: {
     Playwright: {
       url: 'https://checkout.stripe.dev/preview',
-      show: false,
+      show: true,
       browser: 'chromium',
-      waitForNavigation: 3,
       waitForAction: 200
     }
   },
   include: {
-    I: './steps/steps.js',
-    stripeCheckoutPage: './pages/stripeCheckoutPage.js'
+    I: './steps/steps_file.js',
+    stripeCheckoutPage: './pages/stripeCheckoutPage.ts',
+    secure3DPagePage: './pages/secure3DPage.js'
   },
   name: 'ssmith-moonpay-qa-challenge',
   plugins: {
