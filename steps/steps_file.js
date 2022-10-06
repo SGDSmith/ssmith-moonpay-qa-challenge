@@ -23,18 +23,19 @@ module.exports = function() {
     },
 
     failAuthentication() {
+      this.switchTo('iframe');
+      this.switchTo('#challengeFrame.AuthorizeWithUrlApp-content');
+      this.switchTo('iframe');
+      stripeCheckoutPage.failAuthenticationCheck();
       this.switchTo();
-      this.waitForElement('#challengeFrame', 10);
-      this.switchTo('#challengeFrame');
-      secure3DPage.failAuthentication();
       this.switchTo('#checkout-demo');
     },
 
     completeAuthentication() {
-      this.switchTo();
-      this.waitForElement('#challengeFrame', 10);
-      this.switchTo('#challengeFrame');
-      secure3DPage.completeAuthentication();
+      this.switchTo('iframe');
+      this.switchTo('#challengeFrame.AuthorizeWithUrlApp-content');
+      this.switchTo('iframe');
+      stripeCheckoutPage.completeAuthenticationCheck();
       this.switchTo();
     }
 

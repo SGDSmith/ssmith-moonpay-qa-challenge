@@ -12,6 +12,8 @@ module.exports = {
         postCode: '#billingPostalCode'
     },
     payButton: {css: "[data-testid='hosted-payment-submit-button']"},
+    failButton: {css: '#test-source-fail-3ds'},
+    completeButton: {css: '#test-source-authorize-3ds'},
 
     completeOrderForm(cardNumber) {
         I.fillField(this.fields.email, 'Bob@test.com');
@@ -25,6 +27,15 @@ module.exports = {
 
     attemptToPay() {
         I.click(this.payButton);
+        I.wait(3);
+    },
+
+    failAuthenticationCheck() {
+        I.click(this.failButton);
+    },
+    
+      completeAuthenticationCheck() {
+        I.click(this.completeButton);
     }
 
 }

@@ -22,13 +22,13 @@ Scenario('Payment Declined', ({ I }) => {
 Scenario('Successful Payment after Authentication', ({ I }) => {
     I.enterCardDetails(cards.AuthenticationRequiredCard);
     I.attemptToPay();
-    I.failAuthentication();
-    I.see('We are unable to authenticate your payment method.')
+    I.completeAuthentication();
+    I.see('Payment success', '.CheckoutOverlay');
 });
 
 Scenario('Declined Payment after Authentication', ({ I }) => {
     I.enterCardDetails(cards.AuthenticationRequiredCard);
     I.attemptToPay();
-    I.completeAuthentication();
-    I.see('Payment success', '.CheckoutOverlay');
+    I.failAuthentication();
+    I.see('We are unable to authenticate your payment method.');
 });
