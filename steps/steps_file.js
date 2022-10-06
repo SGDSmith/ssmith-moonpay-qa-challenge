@@ -37,6 +37,14 @@ module.exports = function() {
       this.switchTo('iframe');
       stripeCheckoutPage.completeAuthenticationCheck();
       this.switchTo();
+    },
+
+    viewMyBasket() {
+      this.switchTo('#checkout-demo');
+    },
+
+    updateItemQuantity() {
+      stripeCheckoutPage.updateQty(4);
     }
 
   });

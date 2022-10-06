@@ -9,11 +9,13 @@ module.exports = {
         cvc: '#cardCvc',
         name: '#billingName',
         country: '#billingCountry',
-        postCode: '#billingPostalCode'
+        postCode: '#billingPostalCode',
+        qtyField: '#adjustQuantity'
     },
     payButton: {css: "[data-testid='hosted-payment-submit-button']"},
     failButton: {css: '#test-source-fail-3ds'},
     completeButton: {css: '#test-source-authorize-3ds'},
+    qtyButton: {css: '.LineItem-adjustableQtyHitBox'},
 
     completeOrderForm(cardNumber) {
         I.fillField(this.fields.email, 'Bob@test.com');
@@ -34,8 +36,15 @@ module.exports = {
         I.click(this.failButton);
     },
     
-      completeAuthenticationCheck() {
+    completeAuthenticationCheck() {
         I.click(this.completeButton);
+    },
+
+    updateQty(quantity) {
+        I.click(this.qtyButton);
+        I.fillField(this.fields.qtyField, quantity);
+        I.pressKey('Delete');
+        I.pressKey('Enter');
     }
 
 }
